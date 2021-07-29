@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Foodism</string>
+
+    <string name="food_name">Food name</string>
+    <string name="food_cost">Food cost</string>
+    <string name="add">Add</string>
+
+    <string name="food">Food</string>
+    <string name="potable">Potable</string>
+    <string name="dessert">Dessert</string>
+
+    <string name="order_name">Name</string>
+    <string name="order_cost">Cost</string>
+    <string name="order_counter">Counter</string>
+    <string name="order_list">Order</string>
+
+    <string name="total_cost">Total Cost:</string>
+</resources>

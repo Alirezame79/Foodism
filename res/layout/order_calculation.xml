@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/palette_light_yellow"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/black_stroke_gray_square"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/total_cost_container"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/order_list_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_list"
+            android:fontFamily="@font/miglia"
+            android:textSize="9pt"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/palette_black"/>
+
+        <LinearLayout
+            android:id="@+id/order_list_topic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/order_list_name_topic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/order_name"
+                android:textColor="@color/palette_black"
+                android:gravity="center"
+                android:textSize="7pt"
+                android:layout_weight="3"/>
+
+            <TextView
+                android:id="@+id/order_list_cost_topic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/order_cost"
+                android:textColor="@color/palette_black"
+                android:gravity="center"
+                android:textSize="6pt"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/order_list_counter_topic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/order_counter"
+                android:textColor="@color/palette_black"
+                android:gravity="center"
+                android:textSize="6pt"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/space1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/space2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/order_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/total_cost_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.75"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/total_cost_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_cost"
+            android:textColor="@color/palette_black"
+            android:fontFamily="@font/miglia"
+            android:layout_gravity="center"
+            android:padding="7dp"
+            android:textSize="9pt"/>
+
+        <TextView
+            android:id="@+id/total_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/palette_black"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:textSize="7pt"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
